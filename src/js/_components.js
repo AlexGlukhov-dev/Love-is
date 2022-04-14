@@ -1,0 +1,10 @@
+import './components/video'
+/*import './components/section'
+import './components/product-promo'*/
+import './components/accordion'
+import './components/animScroll'
+import './components/animAnchor'
+import './components/sectionSlider'
+import './components/contactsForm'
+import './components/contactsSliders'
+import './components/eventsSlider'

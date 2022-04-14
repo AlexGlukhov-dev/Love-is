@@ -1,0 +1,174 @@
+.footer {
+  display: grid;
+  grid-template-areas:
+    "fl fl fc"
+    "fa fa fa"
+    "fp fp fpac";
+  grid-template-columns: repeat(3, 1fr);
+  padding: 70px 100px 65px;
+  max-height: 400px;
+  background-color: var(--black-color);
+
+  a {
+    font: var(--footer-top-links);
+    color: var(--light-color);
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(255 255 255 / 50%);
+      transition: 0.3s ease-out;
+    }
+  }
+
+  &__logo {
+    grid-area: fl;
+    margin-bottom: 110px;
+
+    @include small-tablet {
+      justify-self: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts {
+    justify-self: end;
+    grid-area: fc;
+    text-align: right;
+
+    &-social {
+      a {
+        position: relative;
+
+        &:first-child {
+          margin-right: 36px;
+        }
+
+        &:last-child::before {
+          content: "";
+          position: absolute;
+          left: -28px;
+          top: 8px;
+          display: inline-block;
+          width: 15px;
+          height: 2px;
+          background-color: var(--light-color);
+        }
+      }
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    &-logos {
+      display: none;
+
+      @include small-tablet {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        padding-top: 30px;
+      }
+    }
+
+    @include small-tablet {
+      justify-self: center;
+      text-align: center;
+    }
+  }
+
+  &__address {
+    position: relative;
+    grid-area: fa;
+    padding-left: 30px;
+    max-width: 35%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      background-color: var(--light-color);
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    a {
+      font: var(--footer-bottom-links);
+    }
+
+    @include small-tablet {
+      margin: 0 20px;
+      padding-left: 0;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    align-self: end;
+    grid-area: fp;
+    padding-left: 30px;
+
+    a {
+      font: var(--footer-bottom-links);
+      text-decoration: underline;
+      opacity: 0.5;
+    }
+
+    @include small-tablet {
+      justify-self: center;
+      padding-left: 0;
+      transform: translate(0, -20px);
+    }
+  }
+
+  &__pac {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: end;
+    grid-area: fpac;
+
+    @include small-tablet {
+      width: 320px;
+      height: 132px;
+      background-color: #1c1c1c;
+      gap: 14px;
+    }
+
+    span {
+      font: var(--pac-mobile);
+      text-align: center;
+      color: var(--light-color);
+    }
+
+    @include small-tablet {
+      justify-self: center;
+      margin: 0;
+      padding: 25px 100px 30px;
+    }
+  }
+
+  @include small-tablet {
+    grid-template-areas:
+      "fc"
+      "fa"
+      "fl"
+      "fp"
+      "fpac";
+    grid-template-columns: 1fr;
+    padding: 0;
+    padding-top: 50px;
+    width: 100%;
+    max-width: 320px;
+    max-height: 574px;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,53 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Intro", sans-serif;
+  --content-width: 1166px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --black-color: #000;
+  --aqua-color: #bceaff;
+
+  // font
+  --font-family-intro: "Intro", sans-serif;
+  --font-family-Kiddy-Kitty: "Kiddy Kitty Bold", sans-serif;
+  --step-size-10: 10px;
+  --step-size-12: 12px;
+  --step-size-13: 13px;
+  --step-size-14: 14px;
+  --step-size-16: 16px;
+  --step-size-18: 18px;
+  --step-size-20: 20px;
+  --step-size-23: 23px;
+  --step-size-24: 24px;
+  --step-size-26: 26px;
+  --step-size-28: 28px;
+  --step-size-30: 30px;
+  --step-size-32: 32px;
+  --step-size-36: 36px;
+  --step-size-38: 38px;
+  --step-size-42: 42px;
+  --step-size-48: 48px;
+  --step-size-50: 50px;
+  --step-size-52: 52px;
+  --step-size-80: 80px;
+  --step-size-90: 90px;
+  --boogaloo-title-desk: 700 var(--step-size-50) / var(--step-size-52) var(--font-family-Kiddy-Kitty);
+  --boogaloo-title-mob: 700 var(--step-size-26) / var(--step-size-30) var(--font-family-Kiddy-Kitty);
+  --middle-bold: 600 var(--step-size-18) / var(--step-size-30) var(--font-family-intro);
+  --pac-mobile: 400 var(--step-size-13) / var(--step-size-20) var(--font-family-intro);
+  --section-title: 600 var(--step-size-42) / var(--step-size-50) var(--font-family-intro);
+  --section-text: 400 var(--step-size-16) / var(--step-size-26) var(--font-family-intro);
+  --hard-bold: 600 var(--step-size-80) / var(--step-size-90) var(--font-family-intro);
+  --product-title: 500 var(--step-size-38) / var(--step-size-48) var(--font-family-intro);
+  --footer-top-links: 600 var(--step-size-16) / var(--step-size-30) var(--font-family-intro);
+  --contacts-form-info: 400 var(--step-size-10) / var(--step-size-16) var(--font-family-intro);
+  --footer-bottom-links: 400 var(--step-size-13) / var(--step-size-23) var(--font-family-intro);
+
+  //border
+  --border-black: 1px solid var(--black-color);
+}

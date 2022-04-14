@@ -1,0 +1,13 @@
+// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    src: url("../fonts/#{$url}.woff2") format("woff2");
+    font-family: "#{$font-family}";
+    font-weight: #{$weight};
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@include font-face("Inter", "../fonts/Inter-VariableFont", 400, normal);
+@include font-face("Kiddy Kitty Bold", "../fonts/Kiddy-Kitty-Bold", bold, normal);

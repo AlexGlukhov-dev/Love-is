@@ -1,0 +1,135 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include small-tablet {
+    top: 40px;
+    border-bottom: var(--border-black);
+    padding-bottom: 20px;
+  }
+
+  &__phone-tel {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    display: inline-block;
+    padding: 4px 90px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--light-color);
+    background-color: rgb(0 0 0 / 20%);
+  }
+
+  &__logo {
+    width: 194px;
+    height: 51px;
+    cursor: pointer;
+
+    @include small-tablet {
+      width: 92px !important;
+      height: 24px !important;
+    }
+  }
+
+  &__social {
+    display: none;
+
+    @include small-tablet {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    a{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .burger {
+    display: none;
+
+    @include small-tablet {
+      @include burger;
+
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 50px;
+
+    &-item {
+      @include small-tablet {
+        color: var(--light-color);
+      }
+    }
+
+    &-item:hover {
+      color: rgb(0 0 0 / 50%);
+      transition: 0.3s ease-out;
+    }
+
+    @include small-tablet {
+      position: absolute;
+      right: 0;
+      top: -200px;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 30px;
+      width: 100%;
+      max-width: 320px;
+      background-color: rgb(34 33 33 / 80%);
+      opacity: 0;
+      transition: 0.3s ease-out;
+      gap: 20px;
+    }
+  }
+}
+
+.menu--active {
+  top: -40px;
+  opacity: 1;
+  transition: 0.3s ease-out;
+}
+
+.burger--active.burger {
+  &::before,
+  &::after {
+    background-color: var(--light-color);
+  }
+}
+
+.header-contacts {
+  position: relative;
+  top: 20px;
+  overflow: visible;
+  margin-bottom: 40px;
+  border-bottom: none;
+  padding-top: 20px;
+
+  @include small-tablet {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .header__phone-tel {
+    display: none;
+
+    @include small-tablet {
+      top: 0;
+      display: block;
+    }
+  }
+}

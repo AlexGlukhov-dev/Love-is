@@ -1,0 +1,168 @@
+.hero {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding-top: 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1366px;
+  max-height: 768px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .main {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 100%;
+    height: 100%;
+
+    &__phone {
+      display: flex;
+      align-items: center;
+      writing-mode: tb-rl;
+      transform: rotate(180deg);
+
+      a:hover {
+        color: rgb(0 0 0 / 50%);
+        transition: 0.3s ease-out;
+      }
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    &__caption {
+      position: relative;
+
+      &-play {
+        position: absolute;
+        left: 42%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.2s ease-out;
+
+        @include small-tablet {
+          left: 100%;
+        }
+      }
+
+      &-play svg {
+        width: 110px;
+        height: 110px;
+        fill: var(--black-color);
+        transition: 0.3s ease-out;
+
+        @include small-tablet {
+          width: 64px;
+          height: 64px;
+        }
+
+        &:hover {
+          fill: #b51313;
+        }
+      }
+
+      &-text {
+        position: absolute;
+        top: 40px;
+        margin-left: 78px;
+        width: 100%;
+        height: 100%;
+        max-width: 760px;
+
+        @include small-tablet {
+          display: none;
+        }
+
+        h1 {
+          font: var(--hard-bold);
+          color: var(--light-color);
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include small-tablet {
+        display: none;
+      }
+
+      &-links {
+        display: flex;
+        transform: rotate(270deg);
+        gap: 60px;
+
+        .social-link {
+          position: relative;
+
+          &:hover {
+            color: rgb(0 0 0 / 50%);
+            transition: 0.3s ease-out;
+          }
+        }
+
+        .social-link:not(:first-child)::before {
+          content: "";
+          position: absolute;
+          left: -36px;
+          top: 15px;
+          display: inline-block;
+          width: 15px;
+          height: 2px;
+          background-color: var(--black-color);
+        }
+      }
+
+      &-btn {
+        position: absolute;
+        right: 25px;
+        bottom: 40px;
+
+        @include small-tablet {
+          display: none;
+        }
+
+        svg {
+          fill: var(--black-color);
+
+          &:hover {
+            fill: rgb(0 0 0 / 50%);
+            transition: 0.3s ease-out;
+          }
+        }
+      }
+    }
+  }
+
+  @include small-tablet {
+    padding: 0 20px;
+    max-width: 320px;
+    max-height: 480px;
+  }
+}
+
+.hero__video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 768px;
+  max-width: 100%;
+  object-fit: cover;
+
+  @include small-tablet {
+    min-height: 480px;
+  }
+}
